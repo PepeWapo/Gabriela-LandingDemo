@@ -1,19 +1,24 @@
-# Landing Gabriela — Astrología, Creatividad y Teatro
+# Landing 1 — Laboratorio de Creatividad para Astrólog@s
 
-Landing page para **Gabriela**, psicóloga que lanza un programa que combina astrología, creatividad y teatro. El sitio funciona como funnel único: capta inscriptos a dos encuentros gratuitos, los deriva a un grupo de WhatsApp, y presenta el programa pago de recursos psicológicos para astrólogos.
+Landing de captación para **Gaby Tomás** (astróloga, docente de teatro y psicodramatista), primera etapa del funnel de venta de su programa de astrología, creatividad y teatro. Esta landing capta inscriptos al Laboratorio de Creatividad gratuito (2 encuentros online), los deriva a un grupo de WhatsApp, y teasea el programa pago de 7 clases al que se accede después.
 
-> ⚠️ **Estado actual: esqueleto / placeholder.** Toda la estructura y el diseño visual están definidos; el copy real está pendiente del brief de discovery con Gabriela (tono de marca, precio, fechas de los encuentros).
+> ✅ **Estado actual: copy real cargado.** La estructura, el diseño visual y el copy de la mayoría de las secciones ya están resueltos a partir del material que compartió el equipo. Quedan puntos puntuales pendientes de confirmación — ver [Pendiente](#pendiente).
 
 ## Estructura del sitio
 
 1. **Navbar** — logo y accesos a redes sociales (Instagram, Facebook, WhatsApp)
-2. **Hero** — presenta los 2 encuentros gratuitos de creatividad/teatro, con CTA de inscripción y botón secundario hacia "Sobre mí"
-3. **Testimonios** — grid de experiencias de participantes
-4. **Formulario de inscripción** — nombre, email, WhatsApp, selección de encuentro, y botón de unión al grupo de WhatsApp
-5. **Sobre mí** — foto, bio y credenciales de Gabriela
-6. **Próximos talleres** — presentación del programa pago de recursos psicológicos para astrólogos
-7. **Contactanos** — formulario simple de consultas
-8. **Footer** — redes y datos de contacto
+2. **Hero** — "Laboratorio de Creatividad para Astrólog@s", 2 encuentros gratuitos online, meta de fecha/duración/cupos, CTA de inscripción y botón secundario hacia "Sobre mí"
+3. **Dolor** — 5 preguntas de identificación dirigidas a astrólog@s (inseguridad, falta de recursos, rigidez técnica)
+4. **Transformación** — promesa central + 4 beneficios concretos post-encuentros
+5. **Qué incluye** — bullets del contenido del Laboratorio (ejercicios, dinámicas, PDF, grabaciones)
+6. **Para quién es / no es** — dos columnas de calificación del lead
+7. **Testimonios** — grid de 4 testimonios reales (Viviana B., Paula M., Lorena B., Natalia P.)
+8. **Formulario de inscripción** — nombre, email, WhatsApp, y botón de unión al grupo de WhatsApp
+9. **Sobre mí** — foto, bio y credenciales de Gaby Tomás
+10. **Cierre** — frase de cierre + CTAs de inscripción y WhatsApp
+11. **Próximos talleres** — teaser del programa pago "Recursos para potenciar la Sesión Astrológica" (7 clases, arranca 26/8, $245.000 con descuento)
+12. **Contactanos** — formulario simple de consultas
+13. **Footer** — redes y datos de contacto
 
 ## Estructura de archivos
 
@@ -22,8 +27,8 @@ Landing page para **Gabriela**, psicóloga que lanza un programa que combina ast
 ├── styles.css
 └── src/
     ├── hero-bg.jpg          # fondo del hero
-    ├── course-card1.jpg     # fondo tarjeta encuentro 01
-    └── course-card2.jpg     # fondo tarjeta encuentro 02
+    ├── course-card1.jpg     # sin uso actualmente (el hero ya no usa tarjetas por encuentro)
+    └── course-card2.jpg     # sin uso actualmente (el hero ya no usa tarjetas por encuentro)
 ```
 
 ## Stack
@@ -34,8 +39,12 @@ Landing page para **Gabriela**, psicóloga que lanza un programa que combina ast
 
 ## Pendiente
 
-- Copy final de todas las secciones (a partir del brief de discovery)
-- Fechas, precio y modalidad del programa pago
-- Testimonios reales de los encuentros gratuitos
-- Foto y bio definitiva de Gabriela
+- Confirmar si **"Gaby Tomás"** es el nombre de marca definitivo (se reemplazó "Gabriela" en base a la bio recibida, a confirmar con Gonzalo)
+- Fechas exactas de agosto de los 2 encuentros gratuitos (el brief solo indica "[día] y [día] de agosto")
+- Confirmar si los 4 testimonios cargados corresponden a este Laboratorio gratuito o a una edición anterior del programa pago
+- Link real del grupo de WhatsApp
+- Email y teléfono de contacto reales
+- Foto real de Gaby Tomás
 - Enlaces reales de redes sociales
+- Copy de la sección "Contactanos" (sigue en placeholder)
+- Landing 2 (conversión/venta del programa pago) — se construye en semana 4-5, después de los encuentros gratuitos, según el plan de ejecución
