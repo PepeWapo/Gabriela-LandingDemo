@@ -71,6 +71,7 @@
     letter-spacing: 0.02em;
   }
   .socials { display: flex; gap: 16px; }
+  .nav-right { display: flex; align-items: center; gap: 20px; }
   .social-icon {
     width: 34px; height: 34px;
     border: 1px solid var(--line);
@@ -169,14 +170,24 @@
   .btn-primary { background: var(--gold); color: var(--bg-night); }
   .btn-secondary { background: transparent; color: var(--gold-soft); border: 1px solid var(--gold); }
   .btn-whatsapp { background: #3fae63; color: #fff; }
-  .hero-ctas .btn-outline {
+  .btn-outline {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
     background-color: var(--bg-night-soft);
     color: var(--gold);
     border: 1px solid var(--gold);
     border-style: solid;
-    border-radius: 999px;
   }
-  .hero-ctas .btn-outline:hover { background-color: var(--bg-night); }
+  .btn-outline:hover { background-color: var(--bg-night); }
+  .nav-right .btn-outline {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
 
   .hero-ctas {
     display: flex;
@@ -190,10 +201,43 @@
   .section-head .eyebrow { color: var(--lilac); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 10px; }
   .section-head h2 { font-size: 32px; color: var(--ink); }
 
-  .testimonios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  .testimonios-carousel {
+    display: flex;
     gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+  }
+  .testimonios-carousel .testimonio-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    scroll-snap-align: start;
+  }
+  /* Scrollbar propia, respetando el tema */
+  .testimonios-carousel {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) var(--bg-night-soft);
+  }
+  .testimonios-carousel::-webkit-scrollbar {
+    height: 6px;
+  }
+  .testimonios-carousel::-webkit-scrollbar-track {
+    background: var(--bg-night-soft);
+    border-radius: 999px;
+  }
+  .testimonios-carousel::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 999px;
+  }
+  .testimonios-carousel::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-soft);
+  }
+  @media (max-width: 720px) {
+    .testimonios-carousel .testimonio-card {
+      flex: 0 0 85%;
+    }
+    .testimonios-carousel {
+      scroll-padding-left: 7.5%;
+    }
   }
   .testimonio-card {
     background: var(--card);
@@ -412,6 +456,5 @@
   }
 
   @media (max-width: 720px) {
-    .testimonios-grid { grid-template-columns: 1fr; }
     section { padding: 56px 20px; }
   }
