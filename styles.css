@@ -192,7 +192,7 @@
 
   .testimonios-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
   }
   .testimonio-card {
@@ -209,6 +209,97 @@
     border: 1px dashed var(--placeholder);
   }
   .testimonio-author span { font-size: 13px; color: var(--gold-soft); }
+
+  /* ---------- DOLOR ---------- */
+  .dolor-list {
+    list-style: none;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .dolor-list li {
+    font-size: 17px;
+    color: var(--ink-dim);
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-display);
+  }
+  .dolor-list li:last-child { border-bottom: 1px solid var(--line); }
+
+  /* ---------- TRANSFORMACIÓN / QUÉ INCLUYE ---------- */
+  .transformacion-lead {
+    max-width: 680px;
+    margin: 0 auto 32px;
+    text-align: center;
+    color: var(--gold-soft);
+    font-family: var(--font-display);
+    font-size: 19px;
+    line-height: 1.5;
+  }
+  .beneficios-list {
+    list-style: none;
+    max-width: 720px;
+    margin: 0 auto;
+    display: grid;
+    gap: 16px;
+  }
+  .beneficios-list li {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 22px;
+    color: var(--ink-dim);
+    font-size: 15px;
+    position: relative;
+    padding-left: 40px;
+  }
+  .beneficios-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 16px;
+    color: var(--gold);
+  }
+
+  /* ---------- PARA QUIÉN ES ---------- */
+  .para-quien-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .para-quien-grid h3 {
+    font-size: 20px;
+    color: var(--gold-soft);
+    margin-bottom: 16px;
+  }
+  .check-list { list-style: none; }
+  .check-list li {
+    font-size: 14px;
+    color: var(--ink-dim);
+    padding: 10px 0 10px 26px;
+    position: relative;
+  }
+  .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+  .check-list--no li::before {
+    content: "✕";
+    color: var(--lilac);
+  }
+  @media (max-width: 720px) {
+    .para-quien-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- CIERRE ---------- */
+  .cierre-frase {
+    max-width: 620px;
+    margin: 0 auto 32px;
+    font-family: var(--font-display);
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1.4;
+  }
 
   /* ---------- FORMULARIO ---------- */
   .form-section .wrap { max-width: 640px; }
