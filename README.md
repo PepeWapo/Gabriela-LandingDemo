@@ -6,13 +6,13 @@ Landing de captación para **Gaby Tomás** (astróloga, docente de teatro y psic
 
 ## Estructura del sitio
 
-1. **Navbar** — logo y accesos a redes sociales (Instagram, Facebook, WhatsApp)
-2. **Hero** — "Laboratorio de Creatividad para Astrólog@s", 2 encuentros gratuitos online, meta de fecha/duración/cupos, CTA de inscripción y botón secundario hacia "Sobre mí"
+1. **Navbar** — logo, link "¿Quién soy?" y accesos a redes sociales (Instagram, Facebook, WhatsApp)
+2. **Hero** — "Laboratorio de Creatividad para Astrólog@s", 2 encuentros gratuitos online, meta de fecha/duración/cupos, CTA de inscripción
 3. **Dolor** — 5 preguntas de identificación dirigidas a astrólog@s (inseguridad, falta de recursos, rigidez técnica)
 4. **Transformación** — promesa central + 4 beneficios concretos post-encuentros
 5. **Qué incluye** — bullets del contenido del Laboratorio (ejercicios, dinámicas, PDF, grabaciones)
 6. **Para quién es / no es** — dos columnas de calificación del lead
-7. **Testimonios** — grid de 4 testimonios reales (Viviana B., Paula M., Lorena B., Natalia P.)
+7. **Testimonios** — carousel horizontal de 4 testimonios reales (Viviana B., Paula M., Lorena B., Natalia P.), 3 tarjetas visibles por vista con scroll-snap y scrollbar temática
 8. **Formulario de inscripción** — nombre, email, WhatsApp, y botón de unión al grupo de WhatsApp
 9. **Sobre mí** — foto, bio y credenciales de Gaby Tomás
 10. **Cierre** — frase de cierre + CTAs de inscripción y WhatsApp
@@ -36,6 +36,12 @@ Landing de captación para **Gaby Tomás** (astróloga, docente de teatro y psic
 - HTML5 + CSS3 estático, sin frameworks ni build step
 - Paleta night-sky con acentos dorados y lila, tipografía serif para headers
 - Pensado para deploy directo en **systeme.io** (formularios, Mercado Pago, automatizaciones de WhatsApp)
+
+## Repositorio y deploy
+
+- El repo está pensado para pasar a **privado**, con Julián y Gonzalo como colaboradores.
+- **Importante:** con GitHub Free, Pages solo funciona sobre repos públicos. Para tener repo privado + demo pública en Pages hace falta **GitHub Pro** (repo personal) o **GitHub Team** (repo de organización) — o, como alternativa sin costo extra, mover el deploy de la demo a Netlify/Vercel conectado al repo privado.
+- Definición pendiente: con cuál de las dos opciones se sigue.
 
 ## Pendiente
 
