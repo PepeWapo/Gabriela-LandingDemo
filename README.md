@@ -1,6 +1,4 @@
-Acá tenés el contenido del `README.md` actualizado con los cambios técnicos y de maquetado realizados en esta sesión (carrusel infinito bidireccional y refactorización responsive/compresión del footer), listo para copiar y pegar:
 
-```markdown
 # Landing 1 — Laboratorio de Creatividad para Astrólog@s
 
 Landing de captación para **Gaby Tomás** (astróloga, docente de teatro y psicodramatista), primera etapa del funnel de venta de su programa de astrología, creatividad y teatro. Esta landing capta inscriptos al Laboratorio de Creatividad gratuito (2 encuentros online), los deriva a un grupo de WhatsApp, y teasea el programa pago de 7 clases al que se accede después.
@@ -25,7 +23,6 @@ Landing de captación para **Gaby Tomás** (astróloga, docente de teatro y psic
 
 ## Estructura de archivos
 
-
 ```
 
 ├── index.html        # Estructura principal + script de carrusel infinito bidireccional
@@ -48,11 +45,13 @@ Landing de captación para **Gaby Tomás** (astróloga, docente de teatro y psic
 ## Registro de Cambios Recientes (Sesión Actual)
 
 ### Carrusel Infinito de Testimonios (`index.html` & `styles.css`)
+
 - **Loop Infinito Bidireccional:** Se reestructuró la clonación de nodos a 2 conjuntos previos y 2 posteriores para permitir scroll continuo tanto hacia la izquierda como hacia la derecha desde el renderizado inicial.
 - **Cálculo Geométrico Dinámico:** Transición de cálculos de ancho estáticos a medición vía `getBoundingClientRect().left`, garantizando la sincronización del reset sin importar alineación (`center` o `start`) o paddings activos.
 - **Reset de Snap Invisible:** Implementación de la clase CSS `.no-snap` (`scroll-snap-type: none !important; scroll-behavior: auto !important;`) aplicada temporalmente por JS durante el reposicionamiento del scroll.
 
 ### Footer Responsive y Alineación Mobile (`styles.css`)
+
 - **Alineación Central:** Se agregaron reglas `@media (max-width: 640px)` para forzar la alineación al centro (`text-align: center`, `align-items: center`) de textos, títulos e íconos de redes sociales.
 - **Colapso de Espacio Vertical:** Anulación del crecimiento flex de las columnas (`flex: 0 0 auto !important;`) y sobreescritura de paddings internos del `footer` (`padding: 1.5rem 1rem 1rem !important;`), eliminando espacios en blanco innecesarios.
 - **Relatividad de Espaciados:** Normalización de todos los márgenes y *gaps* del footer a unidades `rem` (`gap: 1rem`, `margin-bottom: 0.25rem` / `0.125rem`).
@@ -76,5 +75,3 @@ Landing de captación para **Gaby Tomás** (astróloga, docente de teatro y psic
 - Enlaces reales de redes sociales.
 - Copy de la sección "Contactanos" (sigue en placeholder).
 - Landing 2 (conversión/venta del programa pago) — se construye en semana 4-5, después de los encuentros gratuitos, según el plan de ejecución.
-
-```
