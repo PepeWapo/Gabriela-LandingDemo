@@ -11,7 +11,7 @@
   <!-- ================= NAVBAR ================= -->
   <header class="navbar">
     <div class="navbar-inner">
-      <div class="logo">Gaby Tomás ✦</div>
+      <a href="#sobre-mi" class="logo">Gaby Tomás ✦</a>
       <div class="nav-right">
         <a href="#sobre-mi" class="btn-outline">¿Quién soy?</a>
         <div class="socials">
@@ -295,5 +295,84 @@
     <div class="footer-bottom">© 2026 Gaby Tomás — [placeholder legal / créditos]</div>
   </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const carousel = document.querySelector(".testimonios-carousel");
+      if (!carousel) return;
+
+      const originalCards = Array.from(carousel.children);
+      const totalOriginals = originalCards.length;
+      if (totalOriginals === 0) return;
+
+      // 1. Clonación de nodos para el efecto infinito
+      // Clonamos todos los items para insertarlos al inicio y al final
+      const clonesBefore = originalCards.map(card => card.cloneNode(true));
+      const clonesAfter = originalCards.map(card => card.cloneNode(true));
+
+      clonesBefore.forEach(clone => {
+        clone.classList.add("is-clone");
+        carousel.insertBefore(clone, carousel.firstChild);
+      });
+
+      clonesAfter.forEach(clone => {
+        clone.classList.add("is-clone");
+        carousel.appendChild(clone);
+      });
+
+      // 2. Posicionamiento Inicial
+      // Calculamos el desplazamiento necesario para mostrar el primer elemento real
+      const getCardWidth = () => {
+        const firstCard = carousel.querySelector(".testimonio-card");
+        const gap = parseFloat(window.getComputedStyle(carousel).gap) || 0;
+        return firstCard.offsetWidth + gap;
+      };
+
+      const setInitialPosition = () => {
+        const cardWidth = getCardWidth();
+        // Posiciona el scroll justo donde terminan los clones del inicio
+        carousel.scrollLeft = cardWidth * totalOriginals;
+      };
+
+      // Inicialización de posición
+      setInitialPosition();
+
+      // 3. Manejo del ciclo Infinito (Reset imperceptible)
+      let isAdjusting = false;
+
+      const handleInfiniteScroll = () => {
+        if (isAdjusting) return;
+
+        const cardWidth = getCardWidth();
+        const currentScroll = carousel.scrollLeft;
+        const singleSetWidth = cardWidth * totalOriginals;
+
+        // Si el usuario llega a los clones del inicio (hacia la izquierda)
+        if (currentScroll <= cardWidth * 0.5) {
+          isAdjusting = true;
+          carousel.classList.add("no-snap");
+          carousel.scrollLeft += singleSetWidth;
+          carousel.classList.remove("no-snap");
+          isAdjusting = false;
+        } 
+        // Si el usuario llega a los clones del final (hacia la derecha)
+        else if (currentScroll >= singleSetWidth * 2 - cardWidth * 0.5) {
+          isAdjusting = true;
+          carousel.classList.add("no-snap");
+          carousel.scrollLeft -= singleSetWidth;
+          carousel.classList.remove("no-snap");
+          isAdjusting = false;
+        }
+      };
+
+      carousel.addEventListener("scroll", handleInfiniteScroll, { passive: true });
+
+      // Recalcular posición si cambia el tamaño de la pantalla
+      window.addEventListener("resize", () => {
+        carousel.classList.add("no-snap");
+        setInitialPosition();
+        carousel.classList.remove("no-snap");
+      });
+    });
+  </script>
 </body>
 </html>
